@@ -30,4 +30,12 @@ img {
   background: #8600e8;
   color: #fff;
 }
+
+span.badge {
+  position: relative;
+  -webkit-transform: translateX(-2rem);
+          transform: translateX(-2rem);
+  border-radius: 500px;
+  z-index: 2;
+}
 /*# sourceMappingURL=style.css.map */

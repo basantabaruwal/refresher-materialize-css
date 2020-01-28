@@ -40,3 +40,10 @@ body {
     background: lighten(indigo, 20);
     color: #fff;
 }
+//badge style
+span.badge {
+    position: relative;
+    transform: translateX(-2rem);
+    border-radius: 500px;
+    z-index: 2;
+}
