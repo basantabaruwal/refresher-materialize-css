@@ -47,3 +47,24 @@ span.badge {
     border-radius: 500px;
     z-index: 2;
 }
+
+// mixins
+@mixin clearfix {
+    &::before, &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+.card-image-image {
+    // background: linear-gradient(
+        // rgba(0, 0, 0, .04),
+        // rgba(0, 0, 0, .04)
+    // );
+    // border-bottom: 1px solid grey;
+}

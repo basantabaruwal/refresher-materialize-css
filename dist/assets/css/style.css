@@ -38,4 +38,10 @@ span.badge {
   border-radius: 500px;
   z-index: 2;
 }
+
+.clearfix::before, .clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
 /*# sourceMappingURL=style.css.map */
