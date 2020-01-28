@@ -436,7 +436,7 @@
 
         <!-- collections -->
         <ul class="collapsible">
-            <li class="active">
+            <li>
                 <div class="collapsible-header">
                     Collections/Lists
                 </div>
@@ -471,6 +471,36 @@
                 </div>
             </li>
         </ul>
+
+        <ul class="collapsible">
+            <li class="active">
+                <div class="collapsible-header">
+                    Modal
+                </div>
+                <div class="collasible-body">
+                    <div class="container">
+                        <a href="#modal-sample" class="btn organge modal-trigger">Add User</a>
+                        <div class="modal" id="modal-sample">
+                            <div class="modal-content">
+                                <h4 class="modal-header">
+                                    Add User
+                                </h4>
+                            </div>
+                            <div class="modal-footer clearfix">
+                                <a href="#!" class="modal-close btn waves-effect waves-light indigo white-text right mr-3">
+                                    Close
+                                </a>
+                                <a href="#!" class="btn pink  waves-effect waves-light white-text right">
+                                    Add
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+
     </div>
     <!-- container end -->
 
@@ -487,10 +517,14 @@
             var instances = M.Collapsible.init(collapsible);
 
             // make sidenav work
-
             var sideNav = document.getElementById("mobile-nav");
-            console.log(sideNav);
+            // console.log(sideNav);
             var instances = M.Sidenav.init(sideNav);
+
+            // mOdals
+            var modal = document.getElementById('modal-sample');
+            console.log(modal);
+            var instances = M.Modal.init(modal);
 
         });
 
