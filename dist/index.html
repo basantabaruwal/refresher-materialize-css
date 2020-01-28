@@ -17,6 +17,8 @@
 </head>
 
 <body>
+
+
     <div class="container">
         <h2 class="site-heading text-darken-4 yellow-text">
             Materialize Refresher
@@ -239,7 +241,7 @@
         </ul>
 
         <ul class="collapsible">
-            <li class="active">
+            <li>
                 <div class="collapsible-header">
                     <i class="material-icons left indigo-text">cloud</i>
                     Shadows(Box-Shadows)
@@ -277,6 +279,56 @@
             </li>
         </ul>
 
+        <ul class="collapsible">
+            <li class="active">
+                <div class="collapsible-header">
+                    <i class="material-icons pink-text">home</i>
+                    Navbar
+                </div>
+                <div class="collapsible-body">
+                    <nav>
+                        <div class="nav-wrapper pink" style="padding: 0 1rem">
+                            <a href="#" class="brand-logo left">Navbar</a>
+                            <ul class="right">
+                                <li><a href="#!">Home</a></li>
+                                <li><a href="#!">About</a></li>
+                                <li><a href="#!">Career</a></li>
+                                <li><a href="#!">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <hr>
+
+                    <!-- SideNav -->
+                    <ul class="sidenav" id="mobile-navi">
+                    </ul>
+
+                    <nav>
+                        <div class="nav-wrapper indigo lighten-1">
+                            <a href="#!" class="brand-logo left">App Name</a>
+                            <a href="#" data-target="mobile-nav" class="sidenav-trigger right hide-on-med-and-up"><i
+                                    class="material-icons">menu</i></a>
+                            <ul class="right hide-on-small-only">
+                                <li><a href="#!">Home</a></li>
+                                <li><a href="#!">About</a></li>
+                                <li><a href="#!">Career</a></li>
+                                <li><a href="#!">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <ul class="sidenav" id="mobile-nav">
+                        <li><a href="#!">Home</a></li>
+                        <li><a href="#!">About</a></li>
+                        <li><a href="#!">Career</a></li>
+                        <li><a href="#!">Contact</a></li>
+                    </ul>
+
+                </div>
+
+            </li>
+        </ul>
     </div>
     <!-- container end -->
 
@@ -287,15 +339,25 @@
     <script src="./assets/libs/materialize/js/materialize.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var elems = document.querySelectorAll(".collapsible");
-            var instances = M.Collapsible.init(elems, options);
+            // make collapsible components work
+            var collapsible = document.querySelectorAll(".collapsible");
+            // var instances = M.Collapsible.init(elems, options);
+            var instances = M.Collapsible.init(collapsible);
+
+            // make sidenav work
+
+            var sideNav = document.getElementById("mobile-nav");
+            console.log(sideNav);
+            var instances = M.Sidenav.init(sideNav);
+
         });
 
-        // Or with jQuery
+        // // Or with jQuery
 
-        $(document).ready(function () {
-            $(".collapsible").collapsible();
-        });
+        // $(document).ready(function () {
+        //     $(".collapsible").collapsible();
+        //     $(".sidenav").sidenav();
+        // });
     </script>
 </body>
 
